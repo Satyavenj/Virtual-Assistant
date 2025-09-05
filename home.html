@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Virtual Typing Assistant</title>
+  <style>
+    body {
+      background-color: #d0f0c0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #2e7d32;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      color: #388e3c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, {{ username }} 🎉</h1>
+    <p>This is your Virtual Typing Assistant homepage.</p>
+    <a href="{{ url_for('assistant') }}" class="btn">Start Assistant</a>
+    
+    <div class="links">
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+  </div>
+</body>
+</html>
